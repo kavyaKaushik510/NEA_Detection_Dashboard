@@ -5,12 +5,12 @@ import pandas as pd
 
 # re-use your existing implementations
 # (same file or import from append_snr_gmag)
-from append_snr_gmag import (
+from Core_pipeline.append_snr_gmag import (
     snr_at_xy,
     measure_g_on_three,
     build_calibrator_mookodi,
 )
-from append_snr_gmag import load_image_and_wcs, robust_bg  # if needed
+from Core_pipeline.append_snr_gmag import load_image_and_wcs, robust_bg  # if needed
 
 SUBDIR = "aligned"
 

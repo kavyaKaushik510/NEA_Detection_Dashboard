@@ -3,15 +3,15 @@ from pathlib import Path
 import pandas as pd
 import time
 
-from alignment import align_folder
-from generate_candidates_copy_v3 import run_pipeline_single
-from five_channel_v2 import build_test_stamps_for_candidates
-from cnn_run_model import run_cnn_verify_for_dashboard
-from test_2_gb import predict_gb_on_df
-from scoring import combine_cnn_gb
-from append_s_g import augment_snr_gmag_df
-from convert_to_wcs import export_top3_radec_csv
-from mpc_export import build_mpc_for_track
+from Core_pipeline.alignment import align_folder
+from Core_pipeline.generate_candidates_copy_v3 import run_pipeline_single
+from Core_pipeline.five_channel_v2 import build_test_stamps_for_candidates
+from Core_pipeline.cnn_run_model import run_cnn_verify_for_dashboard
+from Core_pipeline.test_2_gb import predict_gb_on_df
+from Core_pipeline.scoring import combine_cnn_gb
+from Core_pipeline.append_s_g import augment_snr_gmag_df
+from Core_pipeline.convert_to_wcs import export_top3_radec_csv
+from Core_pipeline.mpc_export import build_mpc_for_track
 
 MERGE_KEYS = ["folder","f1_x","f1_y","f2_x","f2_y","f3_x","f3_y"]
 

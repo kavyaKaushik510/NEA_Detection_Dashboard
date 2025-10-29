@@ -531,7 +531,7 @@ def run_pipeline_single(folder, master_csv):
     # ============================================================
     # 4. MOTION LINKING ON FILTERED DETECTIONS (GEOMETRY-ONLY, 3 FRAMES)
     # ============================================================
-    from motion_linker_ppa3_v3_5 import PPA3LinkerV2, LinkParamsV2
+    from Core_pipeline.motion_linker_ppa3_v3_5 import PPA3LinkerV2, LinkParamsV2
 
     # Hygiene: drop non-finite x/y before building candidate lists
     def _clean(df):

@@ -6,12 +6,12 @@ import matplotlib.pyplot as plt
 from astropy.io import fits
 from astropy.visualization import simple_norm
 import pandas as pd
-from convert_to_wcs import export_top3_radec_csv
-from mpc_export import build_mpc_for_track 
+from Core_pipeline.convert_to_wcs import export_top3_radec_csv
+from Core_pipeline.mpc_export import build_mpc_for_track 
 
 # Your modules
 from pipeline_core import run_full_pipeline
-from alignment import align_folder
+from Core_pipeline.alignment import align_folder
 
 st.set_page_config(page_title="Asteroid Detection (Confidence Score)", layout="wide")
 st.title("🌌 NEA Detection for Lesedi 1-m Telescope at SAAO")
@@ -293,7 +293,7 @@ if df is not None and len(df):
     with colC:
         mpc_obs_code = st.text_input("Observatory code", value="M28")
 
-    from mpc_export import build_mpc_for_track
+    from Core_pipeline.mpc_export import build_mpc_for_track
 
     combined_mpc_text = ""
     for i in range(min(3, len(top3))):

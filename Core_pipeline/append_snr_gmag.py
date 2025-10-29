@@ -16,7 +16,7 @@ from astropy.wcs import WCS
 from astropy.time import Time
 from astroquery.gaia import Gaia
 import sep
-from snr_core import snr_at_xy
+from Core_pipeline.snr_core import snr_at_xy
 
 # === CONFIG ===
 ROOT_DIR = Path(r"C:\Users\kavya\Documents\valid_copies")
